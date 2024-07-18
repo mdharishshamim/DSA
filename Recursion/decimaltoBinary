@@ -1,0 +1,15 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+void decimaltoBinary(int N){
+    if(N==0){
+        return;
+    }
+    decimaltoBinary(N/2);
+    cout << (N%2);
+}
+int main(){
+    int N=10;
+    decimaltoBinary(N);
+    return 0;
+}
