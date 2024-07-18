@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+double sumArray(int arr[],int size){
+    if(size==0){
+        return 0;
+    }
+    else{
+        return arr[size-1] + sumArray(arr, size-1);
+    }
+}
+double meanArray(int arr[], int size){
+    if(size==0){
+        return 0;
+    }
+    
+    double sum = sumArray(arr,size);
+    return sum/size;
+}
+int main(){
+    int arr[] = {1,2,3,4,5};
+    int size = sizeof(arr)/sizeof(arr[0]);
+    double mean = meanArray(arr, size);
+    cout << mean << endl;
+    return 0;
+}
