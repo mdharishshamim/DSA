@@ -1,0 +1,16 @@
+// Program for length of string using recursion
+#include<bits/stdc++.h>
+using namespace std;
+int lengthofString(const char* str){
+    if(*str == '\0'){
+        return 0;
+    }
+
+    return 1+lengthofString(str+1);
+}
+
+int main(){
+    const char* str = "Hello World!";
+    cout<<lengthofString(str)<<endl;
+    return 0;
+}
