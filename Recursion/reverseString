@@ -1,0 +1,18 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+void printReverse(string S, int size){
+    if(size==0){
+        return;
+    }
+
+    cout << S[size-1];
+    printReverse(S, size-1);
+}
+
+int main(){
+    string S = "illepo";
+    int size = S.length();
+    printReverse(S, size);
+    return 0;
+}
